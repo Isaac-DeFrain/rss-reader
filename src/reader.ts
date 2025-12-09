@@ -64,7 +64,6 @@ class RSSReader {
     private async fetchAndParseFeed(url: string): Promise<RSSFeed> {
         // Use CORS proxy for cross-origin requests
         const corsUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-        console.log(`Fetching feed from: ${corsUrl}`);
 
         const response = await fetch(corsUrl);
         if (!response.ok) {

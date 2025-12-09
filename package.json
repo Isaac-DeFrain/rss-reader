@@ -1,7 +1,7 @@
 {
-    "name": "landing-page",
+    "name": "rss-reader",
     "version": "1.0.0",
-    "description": "Minimalist landing page",
+    "description": "RSS reader with AI-suggested feeds and summaries",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -9,7 +9,11 @@
         "preview": "vite preview"
     },
     "devDependencies": {
+        "terser": "^5.44.1",
         "typescript": "^5.3.3",
         "vite": "^7.2.6"
+    },
+    "dependencies": {
+        "fast-xml-parser": "^5.3.2"
     }
 }

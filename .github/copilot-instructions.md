@@ -1,7 +1,10 @@
 # Copilot Instructions for RSS Reader
 
 ## Project Overview
-This is a TypeScript + Vite web application with two separate entry points: a minimalist landing page (`index.html` + `src/main.ts`) and an RSS feed reader (`reader.html` + `src/reader.ts`).
+TypeScript + Vite web app with two separate entry points:
+
+- a minimalist landing page (`index.html` + `src/main.ts`)
+- an RSS feed reader (`reader.html` + `src/reader.ts`).
 
 ## Architecture
 
