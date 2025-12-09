@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-gradient-1: #f5f7fa;
+            --bg-gradient-2: #c3cfe2;
+            --bg-card: white;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --btn-bg: #000000;
+            --btn-hover: #3f3f3f;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        html.dark-mode {
+            --bg-gradient-1: #0f0f0f;
+            --bg-gradient-2: #1a1a1a;
+            --bg-card: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --btn-bg: #e0e0e0;
+            --btn-hover: #f0f0f0;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: background 0.3s ease;
+        }
+
+        header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .theme-toggle {
+            background: var(--btn-bg);
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        html.dark-mode .theme-toggle {
+            color: #000;
+        }
+
+        .theme-toggle:hover {
+            background: var(--btn-hover);
+        }
+
+        main {
+            text-align: center;
+            background: var(--bg-card);
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px var(--shadow);
+            max-width: 600px;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        button {
+            background: var(--btn-bg);
+            color: #000000;
+            border: none;
+            padding: 12px 32px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #btn {
+            background: var(--btn-bg);
+            color: #ffffff;
+        }
+
+        html.dark-mode #btn {
+            color: #000;
+        }
+
+        button:hover {
+            background: var(--btn-hover);
+        }
+
+        .error {
+            color: #d32f2f;
+            padding: 10px;
+            background: rgba(211, 47, 47, 0.1);
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button-group a,
+        .button-group button {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a.nav-button {
+            background: var(--btn-bg);
+            color: #ffffff;
+            border: none;
+            padding: 12px 32px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        html.dark-mode a.nav-button {
+            color: #000;
+        }
+
+        a.nav-button:hover {
+            background: var(--btn-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+    </header>
+
+    <main>
+        <h1>RSS + AI</h1>
+        <p>Click below to start reading your favorite RSS feeds and get AI summaries all within the browser</p>
+        <div class="button-group">
+            <a href="/reader.html" class="nav-button">RSS Reader</a>
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
